@@ -1,0 +1,105 @@
+/*Contendedor con estilo de editor de código*/
+.contenedor__editor {
+    background-color: #1e1e1e; /* Gris clásico */
+    border: 1px solid #3c3c3c; /* Borde gris oscuro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    font-family: 'consolas', 'Fira Code', 'courier new', monospace; /* Fuente de editor de código */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 20px 20px; /* Margen alrededor del contenedor */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+/* Barra superior (header) del editor de código */
+.contenedor__editor--header {
+    background-color: #2d2d2d; /* Gris más oscuro para el encabezado */
+    display: flex; /* Flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 0 16px; /* Espaciado interno horizontal */
+    height: 35px; /* Altura del encabezado */
+    border-bottom: 1px solid #252526; /* Borde inferior */
+    user-select: none; /* Evita la selección de texto */
+}
+
+/* Botones de control (cerrar, minimizar, maximizar) estilo Mac */
+.contenedor__editor--dots {
+    display: flex; /* Flexbox para alinear los botones */
+    gap: 8px; /* Espacio entre los botones */
+    margin-right: 20px; /* Margen derecho para separar de otros elementos */
+}
+.dot {
+    width: 12px; /* Ancho del botón */
+    height: 12px; /* Altura del botón */
+    border-radius: 50%; /* Botón redondo */
+    display: inline-block; /* Mostrar como bloque en línea */
+}
+.dot__close {
+    background-color: #ff5f56; /* Color rojo para cerrar */
+}
+.dot__minimize {
+    background-color: #ffbd2e; /* Color amarillo para minimizar */
+}
+.dot__maximize {
+    background-color: #27ae60; /* Color verde para maximizar */
+}
+
+/* Pestañas del editor de código */
+.contenedor__editor--tabs {
+    background-color: #1e1e1e; /* Gris más oscuro para las pestañas */
+    color: #cccccc; /* Color de texto gris claro */
+    font-size: 13px; /* Tamaño de fuente */
+    padding: 0 16px; /* Espaciado interno */
+    height: 100%; /* Altura de las pestañas */
+    display: flex; /* Flexbox para alinear las pestañas */
+    align-items: center; /* Centra verticalmente las pestañas */
+    border-top: 2px solid #007acc; /* Linea azul de pestaña activa */
+    border-right: 1px solid #252526;
+}
+.tab__icon {
+    margin-right: 6px; /* Espacio entre el icono y el texto */
+    font-size: 11px; /* Tamaño del icono */
+}
+
+/* Cuerpo del editor de código */
+.contenedor__editor--body {
+    display: flex; /* Flexbox para alinear el contenido */
+    padding: 16px 0; /* Espaciado interno */
+    overflow: auto; /* Habilita el desplazamiento si el contenido es demasiado grande */
+}
+
+/* Columna de línea de código */
+.line-numbers {
+    width: 45px; /* Ancho fijo para los números de línea */
+    text-align: right; /* Alinea los números a la derecha */
+    padding-right: 12px; /* Espaciado interno a la derecha */
+    color: #858585; /* Gris claro para los números de línea */
+    font-size: 14px; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea para los números */
+    display: flex; /* Flexbox para alinear los números de línea */
+    flex-direction: column; /* Alinea los números de línea en columna */
+    user-select: none; /* Evita la selección de texto */
+}
+
+/* Área de código */
+.contenedor__editor--code {
+    margin: 0; /* Sin margen */
+    color: #d4d4d4; /* Color de texto gris claro */
+    font-size: 14px; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea para el código */
+    white-space: pre; /* Mantiene los espacios y saltos de línea */
+}
+
+/* Colores de sintaxis */
+.contenedor__editor--code .keyword {
+    color: #569cd6; /* Azul para palabras clave */
+}
+.contenedor__editor--code .string {
+    color: #d69d85; /* Marrón para cadenas de texto */
+}
+.contenedor__editor--code .comment {
+    color: #6a9955; /* Verde para comentarios */
+    font-style: italic; /* Estilo cursiva para comentarios */
+}
+.contenedor__editor--code .attr {
+    color: #9cdcfe; /* Azul claro para atributos */
+}

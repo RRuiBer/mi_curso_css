@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología BEM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Metodología BEM</h1>
+        <p>BEM (Block, Element, Modifier) es una metodología para nombrar clases en CSS de manera que sea más fácil de entender y mantener. BEM ayuda a crear componentes reutilizables y a evitar conflictos de nombres en el CSS.</p>
+    <h2>Estructura de BEM</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sigla</th>
+                <th>Componente</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>B</td>
+                <td>Bloque</td>
+                <td>Un bloque es un componente independiente y reusable.</td>
+                <td><code>.header</code>, <code>.menu</code>, <code>.card</code></td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>Elemento</td>
+                <td>Un elemento es una parte de un bloque que no tiene un significado independiente.</td>
+                <td><code>.header__title</code>, <code>.menu__item</code>, <code>.card__image</code></td>
+            </tr>
+            <tr>
+                <td>M</td>
+                <td>Modificador</td>
+                <td>Variación o estado de un bloqueo un elemento.</td>
+                <td><code>.menu--active</code>, <code>.header--large</code>, <code>.menu__item--disabled</code></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Sintaxis de BEM</h2>
+    <div class="contenedor__editor">
+        <!-- Barra de herramientas del editor -->
+        <div class="contenedor__editor--header">
+            <div class="contenedor__editor--dots">
+                <span class="dot dot__close"></span>
+                <span class="dot dot__minimize"></span>
+                <span class="dot dot__maximize"></span>
+            </div>
+            <div class="contenedor__editor--tabs">
+                <span class="tab__icon">📄</span>
+                <span class="tab__text">styles.css</span>
+            </div>
+        </div>
+        <div class="contenedor__editor--body">
+            <!-- Columna de números de línea -->
+            <div class="line-numbers">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+            </div>
+            <!-- Contenido del editor -->
+    <pre class="contenedor__editor--code"><code><span class="comment">/* BLOCK */</span>
+<span class="attr">.bloque </span><span class="keyword">{}</span>
+<span></span>
+<span class="comment">/* ELEMENT (con doble guión bajo) */</span>
+<span class="attr">.bloque__elemento </span><span class="keyword">{}</span>
+<span></span>
+<span class="comment">/* MODIFIER (con doble guión) */</span>
+<span class="attr">.bloque--modificador </span><span class="keyword">{}</span>
+<span class="attr">.bloque__elemento--modificador </span><span class="keyword">{}</span>
+</pre>
+        </div>
+    </div>
+</body>
+</html>
