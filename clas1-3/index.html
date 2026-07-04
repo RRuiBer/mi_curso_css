@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Primeros estilos CSS</title>
+        <link rel="stylesheet" href="styles.css"> <!-- Enlace a un archivo de estilo externo -->
+        <style>
+            /* Ejemplo: colores a títulos */
+            h1 {
+                color: rgb(199, 86, 21);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bienvenidos al curso de CSS</h1>
+        <h2>Clase 2: Primeros estilos CSS</h2>
+        
+        <p>Es posible aplicar estilos a elementos HTML desde las etiquetas HTML, desde el encabezado del documento o desde un archivo de estilo externo.</p>
+        <p style="color: blue;">Este es un párrafo en el que se aplica un estilo directamente.</p>
+        <p>El título de este documento tiene un estilo aplicado desde el encabezado del documento.</p>
+        <h3>Este es un subtitulo en el que se aplica un estilo desde un archivo de estilo externo.</h3>
+        
+        <h2>Clase 3: Selectores de clase.</h2>
+        <p>Una clase es un identificador que se puede asignar a uno o más elementos HTML.</p>
+        <p class="fondo">Los selectores de clase se definen con un punto (.) seguido del nombre de la clase. Se pueden aplicar a cualquier elemento HTML.</p>
+        <h3>Sintaxis:</h3>
+        <p>Estilos css:</p>
+        <pre class="fondo">
+            .nombre-de-clase {
+                propiedad: valor;
+            }
+        </pre>
+        <p>Html:</p>
+        <pre class="fondo">
+            <code>&lt;elemento class="nombre-de-clase"&gt;Contenido&lt;/elemento&gt;</code>
+        </pre>
+
+        <h3>Tipos de selectores de clase</h3>
+        <p>Existen diferentes tipos de selectores de clase, como:</p>
+        <div class="contenedor-tabla">
+        <table class="tabla-llamativa">
+            <tr>
+                <th>Selector universal</th>
+                <td><pre>* {color: black;}</pre></td>
+                <td>Aplica el estilo a todos los elementos del documento.</td>
+            </tr>
+            <tr>
+                <th>Selector de tipo</th>
+                <td><pre>p {color: red;}</pre></td>
+                <td>Aplica el estilo a todos los elementos del tipo especificado (en este caso, a todos los párrafos).</td>
+            </tr>
+            <tr>
+                <th>Selector de clase</th>
+                <td><pre>.fondo {background-color: lightgray;}</pre></td>
+                <td>Aplica el estilo a todos los elementos que tengan la clase especificada (en este caso, a todos los elementos con la clase "fondo").</td>
+            </tr>
+            <tr>
+                <th>Selector de ID</th>
+                <td><pre>#mi-id {font-size: 20px;}</pre></td>
+                <td>Aplica el estilo al elemento que tenga el ID especificado (en este caso, al elemento con el ID "mi-id").</td>
+            </tr>
+            <tr>
+                <th>Selector descendiente</th>
+                <td><pre>div p {color: green;}</pre></td>
+                <td>Aplica el estilo a todos los elementos del tipo especificado que están dentro de otro elemento del tipo especificado (en este caso, a todos los párrafos que están dentro de un div).</td>
+            </tr>
+            <tr>
+                <th>Selector de HUD DIRECT</th>
+                <td><pre>div > p {color: blue;}</pre></td>
+                <td>Aplica el estilo a todos los elementos del tipo especificado que son hijos directos de otro elemento del tipo especificado (en este caso, a todos los párrafos que son hijos directos de un div).</td>
+            </tr>
+        </table>
+        </div>
+
+        <H3>Pseudo-clases</H3>
+        <p>Las pseudo-clases son palabras clave añadidas a los selectores que especifican un estado special del elemento seleccionado. Se escriben después del selector, precedidas por dos puntos (:).</p>
+        <p>Ejemplo:</p>
+        <pre class="fondo">.enlace:hover {color: orange; background-color: lightblue; text-decoration: underline; cursor: pointer;}</pre>
+        <p>En este ejemplo, el estilo se aplicará a los elementos con la clase "enlace" cuando el usuario pase el cursor sobre ellos.</p>
+        <button class="enlace">Enlace de ejemplo</button>
+
+        <p>Pseudo-clases comunes:</p>
+        <div class="contenedor-tabla">
+        <table class="tabla-llamativa">
+            <tr>
+                <td><pre>.enlace:link {color: blue;}</pre></td>
+                <td>Aplica el estilo a los enlaces que aún no han sido visitados.</td>
+            </tr>
+            <tr>
+                <td><pre>.enlace:visited {color: purple;}</pre></td>
+                <td>Aplica el estilo a los enlaces que ya han sido visitados.</td>
+            </tr>
+            <tr>
+                <td><pre>.enlace:hover {color: orange;}</pre></td>
+                <td>Aplica el estilo a los elementos cuando el usuario pasa el cursor sobre ellos.</td>
+            </tr>
+            <tr>
+                <td><pre>.enlace:active {color: red;}</pre></td>
+                <td>Aplica el estilo a los elementos en el momento en que son activados (por ejemplo, al hacer clic en un enlace).</td>
+            </tr>
+            <tr>
+                <td><pre>.enlace:focus {color: green;}</pre></td>
+                <td>Aplica el estilo a los elementos que tienen el foco (por ejemplo, al hacer clic en un campo de formulario).</td>
+            </tr>
+        </table>
+        </div>
+
+        <h3>Especificidad</h3>
+        <p>La especificidad es un mecanismo que determina qué reglas de estilo se aplican a un elemento cuando hay varias reglas que podrían aplicarse. La regla con mayor especificidad tiene prioridad sobre las demás.</p>
+        <p>La especificidad se calcula asignando un valor numérico a cada tipo de selector:</p>
+        <ul>
+            <li>Importante (!important): 1000</li>
+            <li>Selector de estilo en línea: 1000</li>
+            <li>Selector de ID: 100</li>
+            <li>Selector de clase, pseudo-clase o atributo: 10</li>
+            <li>Selector de tipo o pseudo-elemento: 1</li>
+            <li>Selector universal: 0</li>
+        </ul>
+    </body>
+</html>

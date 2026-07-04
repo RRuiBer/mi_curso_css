@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a un archivo de estilo externo -->
+</head>
+<body>
+    <h1>Box Model CSS</h1>
+    <p>El Box Model (modelo de caja) es el fundamento de cómo CSS calcula el espacio que ocupa cada elemento en una página web.</p>
+    <h2>Las 4 capas del Box Model</h2>
+    <div class="margin-layer">
+        <span class="label margin-label">Margin</span>
+        
+        <div class="border-layer">
+            <span class="label border-label">Border</span>
+            
+            <div class="padding-layer">
+                <span class="label padding-label">Padding</span>
+                
+                <div class="content-layer">
+                    Content<br>
+                    (Width × Height)
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <p>Componentes del Box Model (de dentro a fuera):</p>
+    <table>
+        <tr>
+            <th><strong>Capa</strong></th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+        </tr>
+        <tr>
+            <td><strong>Content</strong></td>
+            <td>El área donde se muestra el contenido del elemento.</td>
+            <td><code>width: 200px</code>, <code>height: 100px</code></td>
+        </tr>
+        <tr>
+            <td><strong>Padding</strong></td>
+            <td>El espacio entre el contenido y el borde del elemento.</td>
+            <td><code>padding: 10px</code></td>
+        </tr>
+        <tr>
+            <td><strong>Border</strong></td>
+            <td>El borde que rodea al elemento.</td>
+            <td><code>border: 2px solid #000</code></td>
+        </tr>
+        <tr>
+            <td><strong>Margin</strong></td>
+            <td>El espacio entre el borde y los elementos vecinos.</td>
+            <td><code>margin: 10px</code></td>
+        </tr>
+    </table>
+
+    <h2>Buenas Prácticas</h2>
+    <p>Algunas recomendaciones para trabajar con el Box Model:</p>
+    <ul>
+        <li>Utiliza <code>box-sizing: border-box;</code> para incluir padding y border en el ancho y alto del elemento.</li>
+        <li>Evita usar margenes grandes que puedan afectar el diseño responsive.</li>
+        <li>Considera el uso de unidades relativas (como em o rem) para un mejor control del tamaño del texto.</li>
+        <li>Usar padding para espacio interno y margin para espacio externo. Recordar que margin no tiene color de fondo.</li>
+    </ul>
+
+</body>
+</html>

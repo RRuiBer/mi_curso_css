@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a un archivo de estilo externo -->
+</head>
+<body>
+    <h1>Posicionamiento CSS</h1>
+    <p>El posicionamiento en CSS permite controlar la ubicación de los elementos en una página web. Existen diferentes tipos de posicionamiento que se pueden aplicar a los elementos HTML.</p>
+
+    <h2>Tipos de Posicionamiento</h2>
+    <table>
+        <tr>
+            <th><strong>Tipo</strong></th>
+            <th>Descripción</th>
+            <th>Uso común</th>
+        </tr>
+        <tr>
+            <td><strong>Static</strong></td>
+            <td>Es el valor por defecto. Los elementos se posicionan de acuerdo al flujo normal del documento.</td>
+            <td>Elementos normales</td>
+        </tr>
+        <tr>
+            <td><strong>Relative</strong></td>
+            <td>El elemento se posiciona en relación a su posición original en el flujo del documento.</td>
+            <td>Punto de referencia para otros elementos</td>
+        </tr>
+        <tr>
+            <td><strong>Absolute</strong></td>
+            <td>El elemento se posiciona en relación a su contenedor más cercano que tenga un posicionamiento distinto a static.</td>
+            <td>Menús, tooltips, overlays</td>
+        </tr>
+        <tr>
+            <td><strong>Fixed</strong></td>
+            <td>El elemento se posiciona en relación a la ventana del navegador y permanece fijo al hacer scroll.</td>
+            <td>Headers, footers, botones de navegación</td>
+        </tr>
+        <tr>
+            <td><strong>Sticky</strong></td>
+            <td>El elemento se comporta como relative hasta que alcanza un punto específico, luego se comporta como fixed.</td>
+            <td>Headers que se quedan fijos al hacer scroll, tablas de contenido</td>
+        </tr>
+    </table>
+
+    <h2>Ejemplos de Posicionamiento</h2>
+    <!-- Ejemplo de posicionamiento relativo -->
+    <h3>1. Posicionamiento Relativo:</h3>
+    <p>En este ejemplo, el segundo elemento tiene un posicionamiento relativo, lo que significa que se moverá en relación a su posición original y los demás elementos no se verán afectados.</p>
+    <div class="contenedor">
+        <div class="caja">Primer elemento con posicionamiento normal.</div>
+        <div class="caja-relativa">Segundo elemento con posicionamiento relativo.</div>
+        <div class="caja">Tercer elemento con posicionamiento normal.</div>
+    </div>
+
+    <h3>2. Posicionamiento Absoluto:</h3>
+    <p>En este ejemplo, el elemento tiene un posicionamiento absoluto, lo que significa que se posicionará en relación a su contenedor más cercano que tenga un posicionamiento distinto a static.</p>
+    <div class="contenedor-padre">
+        <div class="caja">Primer elemento con posicionamiento normal.</div>
+        <div class="hijo-absolut">Segundo elemento con posicionamiento absoluto.</div>
+        <div class="caja">Tercer elemento con posicionamiento normal. Este elemento ocupa el espacio que dejó el elemento con posicionaiento absoluto.</div>
+    </div>
+    <h3>3. Posicionamiento Fijo:</h3>
+    <p>En este ejemplo, el elemento tiene un posicionamiento fijo, es decir, permanecerá en la misma posición en la ventana del navegador incluso al hacer scroll.</p>
+    <div class="boton-fijo">Elemento con posicionamiento fijo.</div>
+
+    <h3>4. Posicionamiento Sticky:</h3>
+    <p>En este ejemplo, el elemento tiene un posicionamiento sticky, lo que significa que se comporta como relative hasta que alcanza un punto específico, luego se comporta como fixed.</p>
+    <div class="contenedor-scroll">
+        <div class="posicion-sticky">Elemento con posicionamiento sticky.</div>
+        <div class="caja">Contenido del contenedor de scroll.</div>
+        <div class="caja">Contenido del contenedor de scroll.</div>
+        <div class="caja">Contenido del contenedor de scroll.</div>
+        <div class="caja">Contenido del contenedor de scroll.</div>
+    </div>
+
+    <h3>5. Z-Index:</h3>
+    <p>En este ejemplo, se muestra cómo el z-index afecta la capa de los elementos posicionados.</p>
+    <div class="contenedor-zindex">
+        <div class="capa capa1"><strong>Capa 1</strong></div>
+        <div class="capa capa2"><strong>Capa 2</strong></div>
+        <div class="capa capa3"><strong>Capa 3</strong></div>
+    </div>
+
+
+</body>
+</html>

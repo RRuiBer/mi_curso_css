@@ -1,0 +1,166 @@
+body {
+    background-color: #f9f7f6;
+    color: #262626;
+    margin: 10px;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    /* width: 50%; */
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+th {
+    background-color: #262626;
+    color: #F1EEED;
+    padding: 8px 15px;
+    text-align: left;
+}
+
+td {
+    padding: 8px 15px;
+}
+
+tr:nth-child(odd) {
+    color: #262626;
+    background-color: #F5E4DE;
+}
+
+tr:nth-child(even) {
+    color: #262626;
+    background-color: #F1EEED;
+}
+
+.contenedor,
+.contenedor-padre,
+.contenedor-scroll,
+.contenedor-zindex {
+    border: 2px solid #262626;
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    margin: 20px 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.caja,
+.hijo-absolut,
+.boton-fijo,
+.elemento-sticky,
+.capa {
+    color: #262626;
+    border: 1px solid #9EB2A4;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #F1EEED;
+    border-radius: 8px;
+}
+
+.caja-relativa {
+    position: relative;
+    color: #262626;
+    border: 1px solid #9EB2A4;
+    background-color: #F1EEED;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    /* Ejemplo de desplazamiento */
+    bottom: 160px; /* Desplaza hacia arriba */
+    left: 210px; /* Desplaza hacia la derecha */
+    /* top: 20px; Desplaza hacia abajo */
+    /* right: 20px; Desplaza hacia la izquierda */
+    max-width: 400px; /* Limita el ancho máximo de la caja */
+}
+
+.contenedor-padre {
+    position: relative;
+    height: 200px;
+    padding: 10px;
+    margin: 20px 10px;
+    border-radius: 8px;
+}
+
+.hijo-absolut {
+    position: absolute;
+    top: 125px; /* Desplaza hacia abajo */
+    left: 260px; /* Desplaza hacia la derecha */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.boton-fijo {
+    position: fixed;
+    top: 20px; /* Desplaza hacia abajo */
+    right: 20px; /* Desplaza hacia la izquierda */
+    padding: 10px 20px;
+    background-color: #9EB2A4;
+    color: #F1EEED;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave para el cambio de color y la transformación */
+}
+
+.contenedor-scroll {
+    position: relative;
+    height: 200px;
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+    padding: 10px;
+    margin: 20px 10px;
+    border-radius: 8px;
+}
+
+.posicion-sticky {
+    position: sticky;
+    top: 0; /* Se "pega" al top del contenedor */
+    background-color: #262626;
+    color: #F1EEED;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+.contenedor-zindex {
+    position: relative;
+    height: 300px;
+    width: 500px;
+    padding: 10px;
+    margin: 20px 10px;
+    border-radius: 8px;
+}
+
+.capa {
+    position: absolute;
+    padding: 10px;
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    color: #F1EEED;
+    text-align: center;
+}
+
+.capa1 {
+    background-color: #095720;
+    top: 20px;
+    left: 20px;
+    z-index: 1; /* Capa inferior */
+}
+
+.capa2 {
+    background-color: #2b7d2e;
+    top: 60px;
+    left: 40px;
+    z-index: 2; /* Capa intermedia */
+}
+
+.capa3 {
+    background-color: #7ec881;
+    top: 100px;
+    left: 60px;
+    z-index: 3; /* Capa superior */
+}

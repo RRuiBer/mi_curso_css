@@ -1,0 +1,33 @@
+input:focus {
+    outline: none;
+    border: 2px solid #0e7711;
+    box-shadow: 0 0 5px #4CAF50;
+}
+
+li:first-child {
+    color: green;
+    font-weight: bold;
+}
+
+li:last-child {
+    color: blue;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(218, 211, 211);
+}
+
+.quote::before {
+    content: "“";
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-right: 5px;
+}
+
+.quote::after {
+    content: "”";
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-left: 5px;
+}

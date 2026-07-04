@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes y pseudo elements</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a un archivo de estilo externo -->
+</head>
+<body>
+<!-- Pseudo classes -->
+ <h2> Pseudo-classes </h2>
+
+    <p> Las pseudo-clases son palabras clave añadidas a los selectores que especifican un estado especial del elemento seleccionado. Se escriben con dos puntos (:) seguidos del nombre de la pseudo-clase. Por ejemplo, <code>:hover</code> se aplica a un elemento cuando el usuario pasa el cursor sobre él. </p>
+    <p> Ejemplo de pseudo-clases: </p>
+    <ul>
+        <li><code>:hover</code> - Aplica estilos cuando el usuario pasa el cursor sobre un elemento.</li>
+        <li><code>:focus</code> - Aplica estilos cuando un elemento recibe el foco (por ejemplo, al hacer clic en un campo de formulario).</li>
+        <li><code>:nth-child(n)</code> - Aplica estilos al n-ésimo hijo de su padre.</li>
+        <li><code>:first-child</code> - Aplica estilos al primer hijo de su padre.</li>
+        <li><code>:last-child</code> - Aplica estilos al último hijo de su padre.</li>
+    </ul>
+
+    <!-- :hover -->
+    <button>Hover me</button>
+
+    <!-- :focus -->
+    <input type="text" placeholder="Click me">
+
+    <!-- :first-child :last-child -->
+    <ul>
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ul>
+
+    <!-- :nth-child -->
+    <table>
+        <tr>
+            <td>Primera fila</td>
+        </tr>
+        <tr>
+            <td>Segunda fila</td>
+        </tr>
+        <tr>
+            <td>Tercera fila</td>
+        </tr>
+        <tr>
+            <td>Cuarta fila</td>
+        </tr>
+        <tr>
+            <td>Quinta fila</td>
+        </tr>
+    </table>
+
+    <h2> Pseudo-elements </h2>
+    <p> Las pseudo-elementos son palabras clave añadidas a los selectores que permiten seleccionar y estilizar partes específicas de un elemento. Se escriben con dos puntos (::) seguidos del nombre de la pseudo-elemento. Por ejemplo, <code>::before</code> se utiliza para insertar contenido antes del contenido de un elemento. </p>
+    <p> Ejemplo de pseudo-elementos: </p>
+    <ul>
+        <li><code>::before</code> - Inserta contenido antes del contenido de un elemento.</li>
+        <li><code>::after</code> - Inserta contenido después del contenido de un elemento.</li>
+        <li><code>::first-letter</code> - Aplica estilos a la primera letra de un elemento.</li>
+        <li><code>::first-line</code> - Aplica estilos a la primera línea de un elemento.</li>
+    </ul>
+    <p class="quote">En este ejemplo se muestra cómo usar los pseudo-elementos ::before y ::after para agregar comillas alrededor de un texto.</p>
+    <p>Las comillas no son elementos normales del documento html, sino pseudo-elementos que se insertan mediante CSS.</p>
+</body>
+</html>
